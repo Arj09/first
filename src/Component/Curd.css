@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.pop1{
+    display: none;
+}
+.pop{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-right: 20px;
+    
+}
+.line{
+   text-align: center;
+    
+}
+.line:hover{
+    background-color:white;
+    color: blue;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    
+}
+
+.addform{
+    display: flex;
+    width: 60vw;
+    height: 100vh;
+    margin: 20px auto;
+    flex-direction: column;
+    border: 0.2px solid blue;
+}
+@media (max-width:1080px) {
+    .addform{
+        width: 80vw;
+    }
+}
+
+@media (max-width:600px) {
+    .addform{
+        width: 100vw;
+    }
+}
