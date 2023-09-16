@@ -9,20 +9,20 @@
     display: none;
 }
 .pop{
-    width: 100%;
+    width: 80%;
     display: block;
-    position: absolute;
     margin-right: 20px;
     
 }
 .line{
    text-align: center;
+   padding: 5px 10px;
     
 }
 .line:hover{
     background-color:white;
     color: blue;
-    padding: 5px 15px;
+    padding: 5px 10px;
     cursor: pointer;
 
     

@@ -85,16 +85,16 @@ export const Curd = ()=>{
         <>
         
 
-    <TableContainer component={Paper} sx={{width:"80%", margin:"10px auto"}}>
+    <TableContainer component={Paper} sx={{ margin:"10px auto", display:{xs:{width:"90%", md:"80%"}}}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table" >
-        <TableHead sx={{textAlign:"center"}}>
+        <TableHead sx={{textAlign:"center", backgroundColor:"orange"}}>
           <TableRow  >
-            <TableCell  sx={{textAlign:"center"}}>Fullname</TableCell>
-            <TableCell sx={{textAlign:"center"}} align="right">DOB</TableCell>
-            <TableCell  sx={{textAlign:"center"}}align="right">StartDate</TableCell>
-            <TableCell sx={{textAlign:"center"}}  align="right">EndDate</TableCell>
-            <TableCell sx={{textAlign:"center"}}  align="right">Description</TableCell>
-            <TableCell sx={{textAlign:"center"}}  align="right"> </TableCell>
+            <TableCell  sx={{textAlign:"center", color:"white"}}>Fullname</TableCell>
+            <TableCell sx={{textAlign:"center", color:"white"}} align="right">DOB</TableCell>
+            <TableCell  sx={{textAlign:"center", color:"white"}}align="right">StartDate</TableCell>
+            <TableCell sx={{textAlign:"center", color:"white"}}  align="right">EndDate</TableCell>
+            <TableCell sx={{textAlign:"center", color:"white"}}  align="right">Description</TableCell>
+            <TableCell sx={{textAlign:"center", color:"white"}}  align="right">Action </TableCell>
            
           </TableRow>
         </TableHead>
