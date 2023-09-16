@@ -14,7 +14,7 @@ import { Box, Fab, IconButton, Tooltip, Typography, Modal } from "@mui/material"
 import "./Curd.css"
 import { useNavigate } from 'react-router-dom';
 
-
+import axios from 'axios';
 
 
 
@@ -24,7 +24,7 @@ export const Curd = ()=>{
     const [open, setOpen] = useState(false)
     const [buttonshow, setButtonshow] = useState(false)
     const navigate = useNavigate()
-    const upadte = 0
+    const [update, setUpdate] = useState()
 
     const [id, setID] = useState()
     const st = "none"
@@ -64,21 +64,21 @@ export const Curd = ()=>{
     const handleDelet = (id)=>{
       Http.delete(`/DeliveryBoy/delete-Employee/${id}`).then((res)=>{
         console.log(res.data)
-        upadte += 1
+        setUpdate(update=>update+1)
       }).catch((err)=>{
         console.log(err)
       })
       
     }
     useEffect(()=>{
-      Http.get("/DeliveryBoy/Get-Emplyee/").then((res)=>{
+      Http.get("/DeliveryBoy/Get-Employee").then((res)=>{
           console.log(res.data)
           setData(res.data)
       }).catch((err)=>{
           console.log(err)
-          console.log(upadte)
+          
       })
-  }, [upadte])
+  }, [update])
 
 
     return(
@@ -125,9 +125,13 @@ export const Curd = ()=>{
           ))}
           
         </TableBody>
+        
       </Table>
+     
       
     </TableContainer>
+
+   
 
 
 
